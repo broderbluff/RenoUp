@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/signup_text"
-        android:id="@+id/button"
+        android:id="@+id/signupButton"
         android:layout_below="@+id/emailField"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"/>
