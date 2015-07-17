@@ -16,6 +16,7 @@
     <string name="title_activity_signup">SignupActivity</string>
 <string name="signup_error_message">Please make sure you enter a username, password and email address!</string>
 <string name="signup_error_title">Oops!</string>
+<string name="error_title">We\'re sorry!</string>
     <string name="login_error_message">Please make sure you enter a username and password!</string>
     <string name="logout_label">Logout</string>
     <string name="title_activity_reset">ResetActivity</string>

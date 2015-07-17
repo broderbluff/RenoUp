@@ -44,6 +44,7 @@
         <activity
             android:name=".EditFriendsActivity"
             android:label="@string/title_activity_edit_friends"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" >
         </activity>
