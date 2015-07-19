@@ -26,4 +26,15 @@
     <string name="title_activity_edit_friends">Edit Friends</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="error_external_storage">Problem accessing storage</string>
+
+    <array name="camera_choices">
+        <item >Take picture</item>
+        <item >Take video</item>
+        <item >Pick picture</item>
+        <item >Pick video</item>
+
+
+
+    </array>
 </resources>

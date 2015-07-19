@@ -10,4 +10,10 @@
             android:title="@string/edit_friends_menu"
             android:orderInCategory="100"
             app:showAsAction="never"/>
+      <item android:id="@+id/cameraIcon"
+          android:icon="@drawable/ic_action_camera"
+            android:title="Camera"
+           app:showAsAction="always"
+
+          />
 </menu>
