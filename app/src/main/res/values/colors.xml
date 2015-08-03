@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_Green">#388e3c</color>
+    <color name="edittext_light_grey">#bbbbbb</color>
+    <color name="apptheme_color">#388e3c</color>
+    <color name="light_green_button">#4CAF50</color>
+    <color name="pressed_green_button">#C8E6C9</color>
+    <color name="light_green_background">#C8E6C9</color>
+
+
+
+    <color name="swipeRefresh1">#388e3c</color>
+    <color name="swipeRefresh2">#4CAF50</color>
+    <color name="swipeRefresh3">#C8E6C9</color>
+    <color name="swipeRefresh4">#388e3c</color>
+    <color name="swipeRefresh5">#ffffff</color>
+
+
+
+</resources>

@@ -3,13 +3,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                tools:context="eu.brimir.ribbit.EditFriendsActivity">
+                tools:context="eu.brimir.renoup.UI.RecipientActivity">
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RecipientsList"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
+    <TextView
+        android:id="@+id/empty_friend_list"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Add some friends first"/>
+
 </RelativeLayout>

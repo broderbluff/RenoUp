@@ -6,8 +6,8 @@
           android:title="@string/logout_label"
           android:orderInCategory="101"
           app:showAsAction="never"/>
-      <item android:id="@+id/editFriends"
-            android:title="@string/edit_friends_menu"
+      <item android:id="@+id/settings"
+            android:title="@string/settings"
             android:orderInCategory="100"
             app:showAsAction="never"/>
       <item android:id="@+id/cameraIcon"
