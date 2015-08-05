@@ -4,7 +4,7 @@
                 android:layout_height="match_parent"
 
                 android:background="@color/background_Green"
-                tools:context="eu.brimir.renoup.UI.RecipientActivity">
+                tools:context="eu.brimir.renoup.UI.SettingsActivity">
 
     <ImageView
         android:id="@+id/backgroundImage"
@@ -33,37 +33,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp">
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:weightSum="100">
-
-            <EditText
-                android:layout_width="276dp"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:textColorHint="@color/edittext_light_grey"
-                android:textSize="17sp"
-                android:id="@+id/addressField"
-
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:hint="Skriv in adress"
-                android:layout_weight="80"/>
-
-            <Button
-                android:layout_width="43dp"
-                android:layout_height="35dp"
-                android:text="GPS"
-                android:textColor="@android:color/white"
-                android:background="@drawable/button_custom"
-                android:id="@+id/gpsButton"
-                android:layout_weight="20"/>
-        </LinearLayout>
-
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,7 +47,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/gps_button_desc"
+        android:text="Välj vilken tur du kör, du kan alltid ändra det i inställningar senare"
         android:id="@+id/textView2"
         android:textColor="@android:color/white"
         android:textSize="14sp"
@@ -102,31 +71,16 @@
         android:layout_alignEnd="@+id/linearLayout">
 
 
-
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/cancel_button"
             android:textColor="@android:color/white"
             android:background="@drawable/button_custom"
-            android:id="@+id/cancelButton"
+            android:id="@+id/saveSettingsButton"
+            android:text="@string/save_settings_button_label"
             android:layout_below="@+id/linearLayout"
             android:layout_alignRight="@+id/linearLayout"
             android:layout_alignEnd="@+id/linearLayout"
-            android:layout_weight="50"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Skicka"
-            android:id="@+id/sendButton"
-            android:textColor="@android:color/white"
-            android:layout_below="@+id/linearLayout"
-            android:layout_alignLeft="@+id/linearLayout"
-            android:layout_alignStart="@+id/linearLayout"
-            android:background="@drawable/button_custom"
-
-            android:layout_toLeftOf="@+id/cancelButton"
-            android:layout_toStartOf="@+id/cancelButton"
             android:layout_weight="50"/>
     </LinearLayout>
 </RelativeLayout>

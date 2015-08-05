@@ -21,6 +21,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:clipToPadding="false"
+            android:paddingTop="@dimen/inbox_vertical_margin"
             android:paddingBottom="@dimen/inbox_vertical_margin"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
@@ -28,6 +29,10 @@
         android:id="@android:id/empty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/no_messages_label"/>
+        android:layout_marginTop="25dp"
+       android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/edittext_light_grey"
+        android:text="@string/avvikelser"/>
 
 </RelativeLayout>

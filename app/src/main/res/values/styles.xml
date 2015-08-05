@@ -33,13 +33,31 @@
 
 </style>
 
+
+
+
+
+
+
+    <style name="Theme.D1NoTitleDim" parent="Theme.Renoup">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
     <style name="ActionBar.Solid.Renoup" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <item name="background">@drawable/ab_solid_renoup</item>
         <item name="backgroundStacked">@drawable/ab_stacked_solid_renoup</item>
         <item name="backgroundSplit">@drawable/ab_bottom_solid_renoup</item>
         <item name="progressBarStyle">@style/ProgressBar.Renoup</item>
     </style>
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
 
+    </style>
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+
+    </style>
     <style name="ActionBar.Transparent.Renoup" parent="@style/Widget.AppCompat.ActionBar">
         <item name="background">@drawable/ab_transparent_renoup</item>
         <item name="progressBarStyle">@style/ProgressBar.Renoup</item>

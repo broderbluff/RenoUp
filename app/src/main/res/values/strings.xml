@@ -32,7 +32,7 @@
 
 
 
-    <string name="title_activity_recipient">Choose Recipient</string>
+    <string name="title_activity_recipient">Adress och felkod</string>
     <string name="send_menu_send_button">Send</string>
     <string name="error_selecting_file">There was an error with the file selected. Please select another</string>
     <string name="error_selecting_file_title">Sorry!</string>
@@ -49,4 +49,51 @@
     <string name="email">E-post</string>
     <string name="cancel_button">Avbryt</string>
     <string name="settings">Inställningar</string>
+    <string name="push_message">You have a new message from %s</string>
+    <string name="send_message">Skicka meddelande</string>
+    <string name="title_activity_settings">Inställningar</string>
+    <string name="save_settings_button_label">Spara inställningar</string>
+    <string name="avvikelser">Inga skickad avvikelser</string>
+    <string name="getting_messages_from_server">Hämtar från servern</string>
+    <string name="sending">Skickar...</string>
+    <string name="sent">Skickat!</string>
+    <string name="must_pick_route_toast">Du måste välja en tur</string>
+    <string name="gps_button_desc">Klicka på GPS för att hämta adress. \n \n Du kan behöva klicka flera gånger för att få så exakt adress som möjligt</string>
+    <string name="send_again">Skicka igen</string>
+    <string name="map">Karta</string>
+    <string name="resetpassword_dialog">Ett mail har skickats till dig där du kan återställa ditt lösenord</string>
+    <string name="done">Klart!</string>
+
+
+    <string-array name="felkoder">
+
+        <item>Ej utställt</item>
+        <item>Fel innehåll</item>
+        <item>Felvänt kärl</item>
+        <item>Hinder för tömning</item>
+        <item>Snö/Halt</item>
+        <item>Överfullt</item>
+        <item>Övrigt</item>
+
+
+    </string-array>
+
+
+
+
+    <string-array name="turer">
+        <item>Välj tur</item>
+        <item>101</item>
+        <item>102</item>
+        <item>103</item>
+        <item>104</item>
+        <item>105</item>
+        <item>106</item>
+        <item>107</item>
+        <item>108</item>
+
+
+    </string-array>
+
+
 </resources>

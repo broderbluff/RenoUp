@@ -5,7 +5,7 @@
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
+
                 tools:context="eu.brimir.renoup.UI.ViewImageActivity">
 
     <ImageView
@@ -15,5 +15,31 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_above="@+id/footer"
         android:scaleType="fitCenter"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/map"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_custom"
+            android:id="@+id/mapButton"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignRight="@+id/linearLayout"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:layout_weight="50"/>
+    </LinearLayout>
 </RelativeLayout>
