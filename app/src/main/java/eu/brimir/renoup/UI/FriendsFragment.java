@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.util.SparseBooleanArray;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,6 +38,9 @@ import com.parse.ParsePush;
 import com.parse.ParseQuery;
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.BitSet;
@@ -178,13 +182,32 @@ public class FriendsFragment extends Fragment {
 
 
     protected void sendPushNotification(String message) {
-        ParseQuery<ParseInstallation> query = ParseInstallation.getQuery();
-        query.whereContainedIn(ParseConstants.KEY_USERID, getRecipientIds());
+
+
         message = message.trim();
-        ParsePush push = new ParsePush();
-        push.setQuery(query);
-        push.setMessage(message + " - " + ParseUser.getCurrentUser().getString(ParseConstants.KEY_FIRSTNAME));
-        push.sendInBackground();
+
+        JSONObject obj;
+        try {
+            obj = new JSONObject();
+
+            obj.put("action", "eu.brimir.renoup.UPDATE_STATUS");
+            obj.put("customdata", message);
+            obj.put("sender", ParseUser.getCurrentUser().getString(ParseConstants.KEY_FIRSTNAME));
+
+            ParsePush push = new ParsePush();
+            ParseQuery query = ParseInstallation.getQuery();
+            query.whereContainedIn(ParseConstants.KEY_USERID, getRecipientIds());
+
+            // Notification for Android users
+
+            push.setQuery(query);
+            push.setData(obj);
+            push.sendInBackground();
+        } catch (JSONException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
 
     }
 
@@ -196,6 +219,10 @@ public class FriendsFragment extends Fragment {
             final Dialog dialog = new Dialog(getActivity(),
                     R.style.Theme_D1NoTitleDim);
             Window window = dialog.getWindow();
+            WindowManager.LayoutParams wlp = window.getAttributes();
+            wlp.gravity = Gravity.TOP;
+            wlp.y = 300;
+
             window.setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
                     WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
             window.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -204,7 +231,6 @@ public class FriendsFragment extends Fragment {
 
             dialog.setCanceledOnTouchOutside(true);
             dialog.setContentView(R.layout.dialog);
-
 
 
             Button okButton = (Button) dialog.findViewById(R.id.sendDialogButton);
@@ -218,17 +244,17 @@ public class FriendsFragment extends Fragment {
                 }
             });
             okButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    EditText reciverInput = (EditText) dialog.findViewById(R.id.etReciver);
-                    pushMessage = reciverInput.getText().toString();
-                    sendPushNotification(pushMessage);
-                    dialog.dismiss();
+                                            @Override
+                                            public void onClick(View v) {
+                                                EditText reciverInput = (EditText) dialog.findViewById(R.id.etReciver);
+                                                pushMessage = reciverInput.getText().toString();
+                                                sendPushNotification(pushMessage);
+                                                dialog.dismiss();
 
-                }
-            }
+                                            }
+                                        }
 
-        );
+            );
 
 
             dialog.show();

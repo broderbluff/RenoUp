@@ -63,6 +63,7 @@
     <string name="map">Karta</string>
     <string name="resetpassword_dialog">Ett mail har skickats till dig där du kan återställa ditt lösenord</string>
     <string name="done">Klart!</string>
+    <string name="message_from">"Meddelande från: "</string>
 
 
     <string-array name="felkoder">

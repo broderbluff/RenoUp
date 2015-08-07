@@ -14,6 +14,7 @@ public final class ParseConstants {
     public static final String KEY_SENDER_ID = "senderId";
     public static final String KEY_SENDER_NAME = "sender";
     public static final String KEY_FIRSTNAME = "firstName";
+    public static final String KEY_MESSAGE = "message";
     public static final String KEY_FILE = "file";
     public static final String KEY_FILE_TYPE = "fileType";
     public static final String KEY_POSTNR = "postNr";

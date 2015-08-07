@@ -48,10 +48,6 @@ public class InboxFragment extends ListFragment {
         mSwipeRefreshLayout.setColorSchemeResources(R.color.swipeRefresh5, R.color.swipeRefresh4, R.color.swipeRefresh3, R.color.swipeRefresh5);
         mSwipeRefreshLayout.setProgressBackgroundColorSchemeResource(R.color.swipeRefresh2);
 
-        pDialog = new ProgressDialog(getActivity());
-        pDialog.setMessage(getActivity().getString(R.string.getting_messages_from_server));
-        pDialog.setIndeterminate(false);
-        pDialog.setCancelable(false);
 
 
 
@@ -77,7 +73,7 @@ public void getSharedPreferences(){
 
     private void retrieveMessages() {
 
-        pDialog.show();
+
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(ParseConstants.CLASS_MESSAGES);
         query.whereEqualTo(ParseConstants.KEY_ROUTE, routeNumber);
         query.addDescendingOrder(ParseConstants.KEY_CREATED_AT);
@@ -89,11 +85,11 @@ public void getSharedPreferences(){
 
                 if(mSwipeRefreshLayout.isRefreshing()){
                     mSwipeRefreshLayout.setRefreshing(false);
-                    pDialog.dismiss();
+
 
                 }
                 if(e == null){
-                    pDialog.dismiss();
+
                     mMessages = messages;
 
 
